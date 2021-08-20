@@ -24,9 +24,7 @@ header nav ul{
     margin: 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    contain: size;
-    
+    justify-content: space-evenly;    
 }
 header nav ul li{
     background-color: rgb(155, 155, 0);
