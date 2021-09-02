@@ -27,31 +27,9 @@ header nav {
     flex-direction: row;
     justify-content: space-around;
 }
-header nav ul{
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-evenly;
-    contain: size;
-    
-}
-header nav ul a{
-    text-decoration: none;
-}
-header nav ul li{
-    background-color: #A31A1A;
-    padding: 10px 15px;
-    color: black;
-    text-align: center;
-    min-width: 30px;
-    box-sizing: border-box;
-}
 
 main{
     padding: 5px;
-    padding-top: 80px;
 }
 
 footer{
@@ -63,4 +41,20 @@ footer{
 footer a{
     margin: 0px 10px;
     color: black;
+}
+
+.nomes {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5em;
+    text-align: center;
 }
