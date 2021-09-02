@@ -11,25 +11,42 @@
             align-items: center;
             justify-items: center;
             grid-template-columns: 1fr 1fr;
+            height: 600px;
         }
         main div#resumo div{
-            background-color: #fffbe0;
-            border: solid 2px rgb(173, 5, 5);
-            padding: 5px;
-            margin: 20px;
-            max-width: 700px;
-            width: fit-content;
+            position: relative;
+            border: solid 3px rgb(173, 5, 5);
+            box-shadow: 1px 1px 3px black;
+            padding: 10px;
+            max-width: 100%;
             overflow: auto;
-            font-size: 0.9em;
+            transition-property: padding, box-shadow;
+            transition-duration: 0.1s;
         }
+        main div#resumo div:hover {
+            transition-duration: 0.2s;  
+            box-shadow: 1px 1px 6px black;
+            padding: 15px
+        }
+
         main div#resumo div p{
             max-width: 500px;
         }
         main div#resumo div h2{
             text-align: center;
+            color: rgb(119, 0, 0);
+
         }
         main div#resumo div::-webkit-scrollbar{
             display: none;
+        }
+        main div#resumo div a#link_resumo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
     </style>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -38,31 +55,31 @@
 <body>
     <header>
         <nav>
-            <a href="livro.html"><img src="porco.png" alt="Livro"></a>
+            <a href="livro.html"><img src="porco.png" alt="Obra"></a>
             <a href="index.html"><img src="titulo.png" alt="A Revolução Dos Bichos"></a>
-            <a href="autor.html">
-                <img src="galinha.png" alt="Galinha imagem"><img src="cavalo.png" alt="Cavalo Imagem">
-            </a>
+            <a href="autor.html"><img src="galinha_cavalo.png" alt="Autor"></a>
         </nav>
     </header> 
 
     <main>
         <div id="resumo">
-
             <div id="livro">
                 <h2>Revolução dos Bichos</h2>
-                <p>
-                    Cansados da exploração a que são submetidos pelos humanos, os animais da Granja do Solar rebelam-se contra seus donos e tomam posse da fazenda, com o objetivo de instituir um sistema cooperativo e igualitário, sob o slogan "Quatro pernas bom, duas pernas ruins".
-                    Mas não demora muito para que alguns bichos – em particular os mais inteligentes, os porcos – voltem a usufruir de privilégios, reinstituindo aos poucos um regime de opressão, agora inspirado no lema "Todos os bichos são iguais, mas alguns bichos são mais iguais que outros".
-                </p>
+                <p>Cansados da exploração a que são submetidos pelos humanos, os animais da Granja do Solar rebelam-se contra seus donos e tomam posse da fazenda, com o objetivo de instituir um sistema cooperativo e igualitário, sob o slogan "Quatro pernas bom, duas pernas ruins". <br>
+                     Não demora muito para que alguns bichos – em particular os mais inteligentes, os porcos – voltem a usufruir de privilégios, reinstituindo aos poucos um regime de opressão, agora inspirado no lema "Todos os bichos são iguais, mas alguns bichos são mais iguais que outros".
+                </p> 
                 <p>Alegoria, Sátira, Novela, Romance, Sátira Política e Ficção distópica</p>
-
+                <a id="link_resumo" href="livro.html"></a>
             </div>
             <div id="autor">
                 <h2>George Orwell</h2>
-                <p>As informações do autor vão aqui</p>
+                <p>O britânico George Orwell (1903-1950), pseudônimo de Eric Arthur Blair, foi um dos principais escritores no século XX, cujas as obras vinham principalmente das vivências e ideologias em que presenciou. <br>
+                 Os livros mais estimados do autor são <span id="nomes">A Revolução dos Bichos</span> e <span id="nomes">1984</span>, publicadas em 1945 e 1949, respectivamente.</p>
+                <p><q>Todos os animais são iguais, mas alguns animais são mais iguais do que os outros.</q></p>
+
+                <a href="autor.html" id="link_resumo"></a>
             </div>
-        </div>
+    </div>
     </main>
     
     <footer>
